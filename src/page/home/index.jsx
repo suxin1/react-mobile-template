@@ -1,19 +1,22 @@
-import { useContext } from 'react';
+// import { useContext } from 'react';
 
-import { Rect } from './styled';
-import { statisticStoreContext } from './module';
+import Paragraph from 'component/Paragraph';
+import Alignment from '../../component/Alignment';
 
 export default function Home() {
-  const store = useContext(statisticStoreContext);
   return (
     <div>
-      <Rect color="#CCCCCC" />
-      <Rect color="#CCCCCC" />
-      <Rect color="#CCCCCC" />
-      <Rect color="#CCCCCC" />
-      <Rect color="#CCCCCC" />
-      <Rect color="#CCCCCC" />
-      <Rect color="#CCCCCC" />
+      <Alignment align="space-between" style={{ height: '30px' }}>
+        <span>horizontal</span>
+        <span>horizontal</span>
+      </Alignment>
+      <Alignment align="space-between" type="vertical" style={{ height: '60px', background: 'lightblue' }}>
+        <span>vertical</span>
+        <span>vertical</span>
+      </Alignment>
+      <Paragraph variant="title">标头</Paragraph>
+      <Paragraph variant="subtitle1">标头</Paragraph>
+      <Paragraph variant="subtitle2">标头</Paragraph>
     </div>
   );
 }

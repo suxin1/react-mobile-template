@@ -1,5 +1,5 @@
 ?????`src/page/` ??????? `module.js` ???? Mox Store ???????????
-##### store ?????
+##### ????? store ?????
 `./<pathname>/module.js => '<pathname>Store'`;
 ??`./home/module.js => 'homeStore'`
 
@@ -25,14 +25,15 @@ export default myTimer;
 ```
 page/home/index.jsx
 ```javascript
-import { statisticStoreContext } from 'page/home/module.js';
+import { TimerContext } from 'page/home/module.js';
 
-export default function Home() {
-  const store = useContext(statisticStoreContext);
+const Home = () => {
+  const store = useContext(TimerContext);
   return (
-    <div>{store.name}</div>
+    <div>{store.secondsPassed}</div>
   );
 }
+export default observer(Home);
 ```
 
 ### 2, ?? Inject

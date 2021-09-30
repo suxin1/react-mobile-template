@@ -1,12 +1,10 @@
-import { configure, makeAutoObservable } from 'mobx';
+import { makeAutoObservable } from 'mobx';
 import { createContext } from 'react';
-import { statisticApi as api } from 'api';
 
 class Module {
   constructor() {
     makeAutoObservable(this);
   }
-
   staticNumber = {};
   groupsData = {};
   storageTrendDada = { years: [], values: [] };
